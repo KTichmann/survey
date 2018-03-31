@@ -1,14 +1,10 @@
 import {Router} from "jk-router";
 
 const router = () => {
-  const homeButton = document.getElementById("homeButton")
-  const removeDisabledFromLinks = () => {
-    document.querySelectorAll("a").forEach((link) => {
-      link.classList.remove("disabled")
+  const removeActiveFromLinks = () => {
+    document.querySelectorAll("ul").forEach(item => {
+      item.classList.remove("active")
     })
-  }
-  const disableButtonWhenNoAnswerSelected = () => {
-    document.getElementById("input").disabled = "true";
   }
   Router.route("/", {
       name: "home",
@@ -21,10 +17,9 @@ const router = () => {
   Router.route("/question1", {
       name: "question1",
       action() {
-        removeDisabledFromLinks()
+        removeActiveFromLinks()
         document.getElementById("tree-main").style.display = "block"
         document.getElementById("form-inputs").style.display = "none"
-        homeButton.click()
         document.getElementById("input").textContent = "Next Question"
         this.render(`<h1>Question 1:</h1>`, {
           target: "content"
@@ -34,8 +29,7 @@ const router = () => {
   Router.route("/question2", {
       name: "question2",
       action() {
-        removeDisabledFromLinks()
-        homeButton.click()
+        removeActiveFromLinks()
         this.render(`<h1>Question 2:</h1>`, {
           target: "content"
         })
@@ -44,8 +38,7 @@ const router = () => {
   Router.route("/question3", {
       name: "question3",
       action() {
-        removeDisabledFromLinks()
-        homeButton.click()
+        removeActiveFromLinks()
         this.render(`<h1>Question 3:</h1>`, {
           target: "content"
         })
@@ -55,6 +48,7 @@ const router = () => {
       name: "thankyou",
       action() {
         document.getElementById("tree-main").style.display = "none"
+        document.getElementById("input").style.display = "none"
         this.render(`<h1>Thanks!</h1>`, {
           target: "content"
         })
