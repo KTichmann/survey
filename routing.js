@@ -21,7 +21,7 @@ const router = () => {
         })
       }
   });
-  Router.route(base + "/question1", {
+  Router.route("/question1", {
       name: "question1",
       action() {
         removeActiveFromLinks();
