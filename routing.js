@@ -61,7 +61,7 @@ const router = () => {
       action() {
         document.getElementById("tree-main").style.display = "none";
         document.getElementById("input").style.display = "none";
-        this.render(`<h1>Thank You!</h1><br><p>Thanks for taking the time to complete our survey, your answers have been saved. You may now exit this tab. <br> For more information, please visit <a href="#">this site</a>.</p>`, {
+        this.render(`<h1>Thank You!</h1><br><p>Thanks for taking the time to complete our survey, your answers have been saved. You may now exit this tab. <br> For more information, please visit <a href="https://www.google.co.za/search?q=more+information&oq=more+information&aqs=chrome..69i57j0l5.1787j0j4&sourceid=chrome&ie=UTF-8">this site</a>.</p>`, {
           target: "content"
         })
       }
