@@ -14,7 +14,7 @@ const router = () => {
       node.classList.remove("disabled")
     })
   }
-  Router.route(base + "/survey/", {
+  Router.route("/", {
       name: "home",
       action() {
         console.log("base test 1")
@@ -23,13 +23,7 @@ const router = () => {
         })
       }
   });
-  Router.route(base + "/survey", {
-    name:"test",
-    action(){
-      console.log("base test 2")
-    }
-  })
-  Router.route(base + "/question1", {
+  Router.route("/question1", {
       name: "question1",
       action() {
         removeActiveFromLinks();
