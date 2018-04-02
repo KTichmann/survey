@@ -6,14 +6,14 @@ const router = () => {
       item.classList.remove("active")
     })
   }
-  const base = window.location.origin + "/survey/#/"
+  const base = process.env.PUBLIC_URL
   console.log(base)
   const removeDisabledFromLinks = () => {
     document.querySelectorAll(".final").forEach(node => {
       node.classList.remove("disabled")
     })
   }
-  Router.route(base, {
+  Router.route(base + "/", {
       name: "home",
       action() {
         this.render(`<h1>Welcome to our Survey!</h1><br><p>This will only take 5 years to fill out, please begin by filling in your name.</p>`, {
@@ -21,7 +21,7 @@ const router = () => {
         })
       }
   });
-  Router.route("/question1", {
+  Router.route(base + "/question1", {
       name: "question1",
       action() {
         removeActiveFromLinks();
@@ -34,7 +34,7 @@ const router = () => {
         })
       }
   });
-  Router.route(base + "/question2", {
+  Router.route("/question2", {
       name: "question2",
       action() {
         removeActiveFromLinks();
@@ -44,7 +44,7 @@ const router = () => {
         })
       }
   });
-  Router.route(base + "/question3", {
+  Router.route("/question3", {
       name: "question3",
       action() {
         removeActiveFromLinks();
@@ -54,7 +54,7 @@ const router = () => {
         })
       }
   });
-  Router.route(base + "/thankyou", {
+  Router.route("/thankyou", {
       name: "thankyou",
       action() {
         document.getElementById("tree-main").style.display = "none";
