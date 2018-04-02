@@ -6,21 +6,29 @@ const router = () => {
       item.classList.remove("active")
     })
   }
-  const base = process.env.PUBLIC_URL
+  const base = window.location.origin;
   console.log(base)
+  console.log(base + "/survey")
   const removeDisabledFromLinks = () => {
     document.querySelectorAll(".final").forEach(node => {
       node.classList.remove("disabled")
     })
   }
-  Router.route(base + "/", {
+  Router.route(base + "/survey/", {
       name: "home",
       action() {
+        console.log("base test 1")
         this.render(`<h1>Welcome to our Survey!</h1><br><p>This will only take 5 years to fill out, please begin by filling in your name.</p>`, {
           target: "content"
         })
       }
   });
+  Router.route(base + "/survey", {
+    name:"test",
+    action(){
+      console.log("base test 2")
+    }
+  })
   Router.route(base + "/question1", {
       name: "question1",
       action() {
