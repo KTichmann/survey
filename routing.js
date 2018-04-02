@@ -6,7 +6,7 @@ const router = () => {
       item.classList.remove("active")
     })
   }
-  const base = window.location.origin + "/survey/"
+  const base = window.location.origin + "/survey/#/"
   console.log(base)
   const removeDisabledFromLinks = () => {
     document.querySelectorAll(".final").forEach(node => {
