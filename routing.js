@@ -6,9 +6,9 @@ const router = () => {
       item.classList.remove("active")
     })
   }
-  const base = window.location.origin;
-  console.log(base)
-  console.log(base + "/survey")
+  const addQuestionNumberToInput = (questionNumber) => {
+    document.getElementById("question").value = questionNumber
+  }
   const removeDisabledFromLinks = () => {
     document.querySelectorAll(".final").forEach(node => {
       node.classList.remove("disabled")
@@ -17,7 +17,6 @@ const router = () => {
   Router.route("/", {
       name: "home",
       action() {
-        console.log("base test 1")
         this.render(`<h1>Welcome to our Survey!</h1><br><p>This will only take 5 years to fill out, please begin by filling in your name.</p>`, {
           target: "content"
         })
@@ -28,6 +27,7 @@ const router = () => {
       action() {
         removeActiveFromLinks();
         removeDisabledFromLinks();
+        addQuestionNumberToInput(1);
         document.getElementById("tree-main").style.display = "block"
         document.getElementById("form-inputs").style.display = "none"
         document.getElementById("input").textContent = "Next Question"
@@ -41,6 +41,7 @@ const router = () => {
       action() {
         removeActiveFromLinks();
         removeDisabledFromLinks();
+        addQuestionNumberToInput(2);
         this.render(`<h1>Question 2:</h1><br><p>If you were looking for information about mentoring, where do you think you would find it?</p>`, {
           target: "content"
         })
@@ -51,6 +52,7 @@ const router = () => {
       action() {
         removeActiveFromLinks();
         removeDisabledFromLinks();
+        addQuestionNumberToInput(3);
         this.render(`<h1>Question 3:</h1><br><p>If you were looking for a case study from Ghana, where do you think you would find it?</p>`, {
           target: "content"
         })
