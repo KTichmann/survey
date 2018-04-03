@@ -80,7 +80,22 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     case "#/question2":
       Router.go("/question3");
       break;
-    case "#/question3":
+          case "#/question3":
+      Router.go("/question4");
+      break;
+          case "#/question4":
+      Router.go("/question5");
+      break;
+          case "#/question5":
+      Router.go("/question6");
+      break;
+          case "#/question6":
+      Router.go("/question7");
+      break;
+          case "#/question7":
+      Router.go("/question8");
+      break;
+    case "#/question8":
       Router.go("/thankyou");
       break;
   }
