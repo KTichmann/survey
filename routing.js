@@ -17,7 +17,7 @@ const router = () => {
   Router.route("/", {
       name: "home",
       action() {
-        this.render(`<!-- <h1>Welcome to our Survey!</h1><br><p>This will only take 5 years to fill out, please begin by filling in your name.</p> -->`, {
+        this.render(`<h1>Welcome to our Survey!</h1><br><p>This will only take 5 minutes to fill out. The survey is a chance for us to test the layout of our menus for usability. Each question will ask you to find some section or information in the menu provided. Remember, there are no wrong answers! <br> Please begin by filling in your name"</p>`, {
           target: "content"
         })
       }
@@ -43,7 +43,7 @@ const router = () => {
         removeActiveFromLinks();
         removeDisabledFromLinks();
         addQuestionNumberToInput(2);
-        this.render(`<h1>Question 2:</h1><br><p>Where would you find out how to train teachers in the TaRL methodology?</p>`, {
+        this.render(`<h1>Question 2:</h1><br><p>Where would you find out how to train teachers in the methodology?</p>`, {
           target: "content"
         })
       }
@@ -54,7 +54,7 @@ const router = () => {
         removeActiveFromLinks();
         removeDisabledFromLinks();
         addQuestionNumberToInput(3);
-        this.render(`<h1>Question 3:</h1><br><p>You know what TaRL is but want to find out whether it actually works. Where can you see evidence that TaRL is effective?</p>`, {
+        this.render(`<h1>Question 3:</h1><br><p>You know what the approach is but want to find out whether it actually works. Where can you see evidence that the approach is effective?</p>`, {
           target: "content"
         })
       }
@@ -65,7 +65,7 @@ const router = () => {
         removeActiveFromLinks();
         removeDisabledFromLinks();
         addQuestionNumberToInput(4);
-        this.render(`<h1>Question 4:</h1><br><p>You are convinced by the TaRL method but feel that you need more support to design your own TaRL programme. Where could you go to find out what support J-PAL/Pratham can offer?</p>`, {
+        this.render(`<h1>Question 4:</h1><br><p>You are convinced by the toolkit's method but feel that you need more support to design your own TaRL programme. Where could you go to find out what support our organization can offer?</p>`, {
           target: "content"
         })
       }
@@ -76,7 +76,7 @@ const router = () => {
         removeActiveFromLinks();
         removeDisabledFromLinks();
         addQuestionNumberToInput(5);
-        this.render(`<h1>Question 5:</h1><br><p>You want to know who should teach TaRL classes. Where would you go to find out who TaRL instructors are?</p>`, {
+        this.render(`<h1>Question 5:</h1><br><p>You want to know who should teach these classes. Where would you go to find out who our instructors are?</p>`, {
           target: "content"
         })
       }
@@ -87,7 +87,7 @@ const router = () => {
         removeActiveFromLinks();
         removeDisabledFromLinks();
         addQuestionNumberToInput(6);
-        this.render(`<h1>Question 6:</h1><br><p>You want to know if TaRL has been implemented before. Where can you go to find examples?</p>`, {
+        this.render(`<h1>Question 6:</h1><br><p>You want to know if this program has been implemented before. Where can you go to find examples?</p>`, {
           target: "content"
         })
       }
@@ -98,7 +98,7 @@ const router = () => {
         removeActiveFromLinks();
         removeDisabledFromLinks();
         addQuestionNumberToInput(7);
-        this.render(`<h1>Question 7:</h1><br><p>You want to know which grades TaRL caters for. Where do you think you could find this information?</p>`, {
+        this.render(`<h1>Question 7:</h1><br><p>You want to know which grades this approach caters for. Where do you think you could find this information?</p>`, {
           target: "content"
         })
       }
@@ -109,7 +109,7 @@ const router = () => {
         removeActiveFromLinks();
         removeDisabledFromLinks();
         addQuestionNumberToInput(8);
-        this.render(`<h1>Question 8:</h1><br><p>  You would like to see the TaRL curriculum. Where would you go find out about this?</p>`, {
+        this.render(`<h1>Question 8:</h1><br><p>  You would like to see the curriculum. Where would you go find out about this?</p>`, {
           target: "content"
         })
       }
@@ -120,7 +120,7 @@ const router = () => {
       action() {
         document.getElementById("tree-main").style.display = "none";
         document.getElementById("input").style.display = "none";
-        this.render(`<h1>Thank You!</h1><!--<br><p>Thanks for taking the time to complete our survey, your answers have been saved. You may now exit this tab. <br> For more information, please visit <a href="https://www.google.co.za/search?q=more+information&oq=more+information&aqs=chrome..69i57j0l5.1787j0j4&sourceid=chrome&ie=UTF-8">this site</a>.</p>-->`, {
+        this.render(`<h1>Thank You!</h1> <br><p>Thanks for taking the time to complete our survey, your answers have been saved. You may now exit this tab. <br> For more information, please visit <a href="https://www.google.co.za/search?q=more+information&oq=more+information&aqs=chrome..69i57j0l5.1787j0j4&sourceid=chrome&ie=UTF-8">this site</a>.</p>`, {
           target: "content"
         })
       }
