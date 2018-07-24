@@ -65,7 +65,7 @@ const router = () => {
         removeActiveFromLinks();
         removeDisabledFromLinks();
         addQuestionNumberToInput(4);
-        this.render(`<h1>Question 4:</h1><br><p>You are convinced by the toolkit's method but feel that you need more support to design your own TaRL programme. Where could you go to find out what support our organization can offer?</p>`, {
+        this.render(`<h1>Question 4:</h1><br><p>You are convinced by the toolkit's method but feel that you need more support to design your own programme. Where could you go to find out what support our organization can offer?</p>`, {
           target: "content"
         })
       }
@@ -120,7 +120,7 @@ const router = () => {
       action() {
         document.getElementById("tree-main").style.display = "none";
         document.getElementById("input").style.display = "none";
-        this.render(`<h1>Thank You!</h1> <br><p>Thanks for taking the time to complete our survey, your answers have been saved. You can view your responses in <a href="">this google sheet</a>.</p>`, {
+        this.render(`<h1>Thank You!</h1> <br><p>Thanks for taking the time to complete our survey, your answers have been saved. You can view your responses in <a href="https://docs.google.com/spreadsheets/d/1pmCHoH-8eAoP9A7jYw38g9rQVgewTypElhkCz1bU7ts/edit#gid=0">this google sheet</a>.</p>`, {
           target: "content"
         })
       }
