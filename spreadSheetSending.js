@@ -3,7 +3,6 @@ const addSpreadSheetEvents = () => {
   document.querySelectorAll(".choice").forEach(node =>
     node.addEventListener("click", e => {
       list.push(e.target.textContent);
-      console.log(list);
     })
   );
   document.getElementById("input").addEventListener("click", () => {

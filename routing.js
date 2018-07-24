@@ -17,7 +17,8 @@ const router = () => {
   Router.route("/", {
       name: "home",
       action() {
-        this.render(`<h1>Welcome to our Survey!</h1><br><p>This will only take 5 years to fill out, please begin by filling in your name.</p>`, {
+        this.render(`<h1>Welcome to our Survey!</h1><br><p> This is a simple UX test to find out whether our menu's architecture is easy to navigate and find the information that customers are looking for. It should only take a few minutes, and there are no wrong answers! Thanks so much for your help.
+        </p><p>Please begin by filling in your name.</p>`, {
           target: "content"
         })
       }
@@ -31,7 +32,7 @@ const router = () => {
         document.getElementById("tree-main").style.display = "block"
         document.getElementById("form-inputs").style.display = "none"
         document.getElementById("input").textContent = "Next Question"
-        this.render(`<h1>Question 1:</h1><br><p>If you were looking for information about assessment, where do you think you would find it?</p>`, {
+        this.render(`<h1>Question 1:</h1><p>If you were looking for information about assessment, where do you think you would find it?<br>(Click the menu buttons to reveal sub-menu items)</p>`, {
           target: "content"
         })
       }
